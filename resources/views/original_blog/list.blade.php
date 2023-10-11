@@ -48,7 +48,7 @@
                     <td><a href="/blog/{{ $original_blog->id }}">{{ $original_blog->title }}</a></td>
                     <td>{{ $original_blog->updated_at }}</td>
                     <td><button type="button" class="btn-primary" onclick="location. href='/blog/edit/{{ $original_blog->id }}'">編集</button></td>
-                    <form method="POST" action="{{ route('delete',$original_blog->id) }}" onSubmit="return checkDelete()">
+                    <form method="POST" action="{{ route('delete',$original_blog ->id) }}" onSubmit="return checkDelete()">
                         @csrf
                     <td><button type="submit" class="btn-primary" onclick=>削除</button></td>
                     </form>
