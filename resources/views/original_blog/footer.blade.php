@@ -1,3 +1,3 @@
-<div class="container text-center">
-    <span class="text-light">©︎福のプログラミング講座</span>
+<div class="text-center" id="container">
+    <span>©︎福のプログラミング講座</span>
 </div>

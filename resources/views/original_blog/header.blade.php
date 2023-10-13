@@ -1,12 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">ブログ</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="{{ route('OriginalBlogs') }}">ブログ一覧 <span class="sr-only"></span></a>
-        <a class="nav-item nav-link" href="{{ route('create') }}">ブログ投稿</a>
+<nav class="flex flex-row space-x-6 flex-wrap bg-slate-600 p-5">
+    <a class="text-lg hover:text-blue-200" href="#">ブログ</a>
+    <div class="text-lg flex space-x-6">
+        <a class="hover:text-blue-200" href="{{ route('OriginalBlogs') }}">ブログ一覧 <span class=""></span></a>
+        <a class="hover:text-blue-200" href="{{ route('create') }}">ブログ投稿</a>
     </div>
     </div>
 </nav>

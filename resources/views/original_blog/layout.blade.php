@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    @vite ('resources/css/app.css')
 </head>
-<body>
-    <header>
+<body class="flex flex-col h-screen">
+    <header class="bg-gray-800 text-white font-bold" id='header'>
     @include('original_blog.header')
     </header>
     <br>
-    <div class="container">
+    <div class="">
     @yield('content')
 </div>
     </div>
-    <footer class="footer bg-dark  fixed-bottom">
+    <footer class="bg-gray-800 text-white p-4 w-full mt-auto " id='footer'>
         @include('original_blog.footer')
     </footer>
 </body>

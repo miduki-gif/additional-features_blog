@@ -1,13 +1,12 @@
 @extends('original_blog.layout')
 @section('title', 'ブログ編集')
 @section('content')
-<div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <h2>ブログ編集フォーム</h2>
+<div>
+        <h2 class="text-3xl font-medium mb-3 pl-6">ブログ編集フォーム</h2>
         <form method="POST" action="{{ route('update') }}" onSubmit="return checkSubmit()">
          @csrf
          <input type="hidden" name="id" value="{{ $original_blog_edit->id }}" >
-            <div class="form-group">
+            <div class="form-group mt-8 pl-6">
                 <label for="title">
                     タイトル
                 </label>
@@ -23,14 +22,14 @@
                     </div>
                 @endif
             </div>
-            <div class="form-group">
+            <div class="form-group mt-8 pl-6 mr-4">
                 <label for="content">
                     本文
                 </label>
                 <textarea
                     id="content"
                     name="content"
-                    class="form-control"
+                    class="block p-2.5 w-full text-black bg-gray-50 rounded-md border  dark:border-gray-600"
                     rows="4"
                 >{{ $original_blog_edit->content }}</textarea>
                 @if ($errors->has('content'))
@@ -39,14 +38,13 @@
                     </div>
                 @endif
             </div>
-            <div class="mt-5">
-                <a class="btn btn-secondary" href="{{ route('OriginalBlogs') }}">
+            <div class="mt-10 flex  justify-center gap-x-5">
+                <a class="shadow-lg px-2 py-1  bg-slate-600 text-lg text-white font-semibold rounded  hover:bg-slate-800 hover:shadow-sm hover:translate-y-0.5 transform transition" href="{{ route('OriginalBlogs') }}">
                     キャンセル
                 </a>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="shadow-lg px-2 py-1  bg-blue-600 text-lg text-white font-semibold rounded  hover:bg-blue-800 hover:shadow-sm hover:translate-y-0.5 transform transition">
                     更新する
                 </button>
-            </div>
         </form>
     </div>
 </div>

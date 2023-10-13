@@ -14,13 +14,10 @@
 @extends('original_blog.layout')
 @section('title', 'ブログ詳細')
 @section('content')
-<div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2>{{ $original_blog_content->title }}</h2>
-            <span>作成日：{{ $original_blog_content->created_at }}</span>
+        <div>
+            <h2 class="text-3xl font-medium mb-3 pl-6 ">{{ $original_blog_content->title }}</h2>
+            <span class="pl-6">作成日：{{ $original_blog_content->created_at }}</span>
             <span>更新日：{{ $original_blog_content->updated_at }}</span>
-            <p>{{ $original_blog_content->content }}</p>
-
-        </div>
+            <p class="mt-8 pl-6 mr-5">{{ $original_blog_content->content }}</p>
         </div>
         @endsection
