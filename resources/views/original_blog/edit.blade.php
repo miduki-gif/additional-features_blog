@@ -13,7 +13,7 @@
                 <input
                     id="title"
                     name="title"
-                    class="form-control"
+                    class="block p-2.5 w-full text-black bg-gray-50 rounded-md border  dark:border-gray-600"
                     value="{{ $original_blog_edit->title }}"
                     type="text">
                 @if ($errors->has('title'))
